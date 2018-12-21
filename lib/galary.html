@@ -1,0 +1,214 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="top_bar">
+    <ul>
+        <li><h1>STAMP COLECTOR</h1></li>
+        <li>
+            <img style="height: 10vh; width: 10vw" src="../images/logo.png" alt="logo">
+        </li>
+        <li style="float:right;">
+            FOLOW US ON: <br>
+                <span>
+                <a href="www.facebook.com"><img style="height: 2.5vh; width: 2.5vw; border-radius: 50%;" src="../images/fb.png" alt="FACEBOOK"></a>
+                <a href="www.twiter.com"><img style="height: 2.5vh; width: 2.5vw;border-radius: 50%;" src="../images/twitwer.png" alt="TWITER"></a>
+                <a href="www.instragram.com"><img style="height: 2.5vh; width: 2.5vw;border-radius: 50%;" src="../images/instragram'.png" alt="INSTRAGRAM"></a>
+                </span>
+        </li>
+    </ul>
+</div>
+<!-- drop down category manu -->
+<div id="category-search">
+<select id="country-selector">
+    <optgroup label="COUNTRY">
+       <option value="usa">USA</option>
+       <option value="bangladesh">BANGLADESH</option>
+       <option value="australia">AUSTRALIA</option>
+       <option value="england">ENGLAND</option>
+    </optgroup>
+</select>
+<div id="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+</div>
+<!-- nav bar -->
+<div id="nav-bar">
+    <ul id="nav-list">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../lib/bangladesh.html">BANGLADESH</a></li>
+        <li><a href="#">USA</a></li>
+        <li><a href="#">AUSTRALIA</a></li>
+        <li><a href="#">ENGLAND</a></li>
+    </ul>
+</div>
+
+<div id="bangladesh" value = "bangladesh">
+    <div class="card"> 
+        <img src="../images/ban_stamp1.jpg" alt="STAMP" style="width:100%;">
+        <div class="container">
+            <h4>Issued Year: 1922</h4> 
+            <h4>Description: This is national masque of Bangladesh.</h4>
+            <h4>Name of collection: Bangladesh</h4>
+            <h4>Size: 400mm X 350mm</h4>
+            <h4>Stamp Owned: 5</h4>
+            <h4>Stamp glued to: Album(Bangladesh)</h4>
+        </div>
+    </div>
+    <div class="card">
+        <img src="../images/ban_stamp2.jpg" alt="STAMP" style="width:100%">
+        <div class="container">
+            <h4>Issued Year: 1962</h4> 
+            <h4>Description: This is national monoment of Bangladesh.</h4>
+            <h4>Name of collection: Bangladesh</h4>
+            <h4>Size: 450mm X 350mm</h4>
+            <h4>Stamp Owned: 3</h4>
+            <h4>Stamp glued to: Album(Bangladesh)</h4>
+        </div>
+    </div> 
+    <div class="card">
+        <img src="../images/ban_stamp3.jpg" alt="STAMP" style="width:100%">
+            <div class="container">
+                    <h4>Issued Year: 1940</h4> 
+                    <h4>Description: This is natural beauty Bangladesh.</h4>
+                    <h4>Name of collection: Bangladesh</h4>
+                    <h4>Size: 400mm X 400mm</h4>
+                    <h4>Stamp Owned: 1</h4>
+                    <h4>Stamp glued to: Album(Bangladesh)</h4>
+            </div>
+    </div>
+    <div class="card">
+        <img src="../images/ban_stamp44.jpg" alt="STAMP" style="width:100%">
+        <div class="container">
+                <h4>Issued Year: 1935</h4> 
+                <h4>Description: Child are playing in green field</h4>
+                <h4>Name of collection: Bangladesh</h4>
+                <h4>Size: 400mm X 350mm</h4>
+                <h4>Stamp Owned: 1</h4>
+                <h4>Stamp glued to: Album(Bangladesh)</h4>
+        </div>
+    </div>
+    <div class="card">
+        <img src="../images/ban_stamp5.jpg" alt="STAMP" style="width:100%">
+        <div class="container">
+                <h4>Issued Year: 1980</h4> 
+                <h4>Description: Two nation poet of Bangladesh</h4>
+                <h4>Name of collection: Bangladesh</h4>
+                <h4>Size: 400mm X 350mm</h4>
+                <h4>Stamp Owned: 20</h4>
+                <h4>Stamp glued to: Album(Bangladesh)</h4> 
+        </div>
+    </div>
+    <div class="card">
+        <img src="../images/ban_stamp6.jpg" alt="STAMP" style="width:100%">
+        <div class="container">
+                <h4>Issued Year: 1992</h4> 
+                <h4>Description: This is national fish(Hilsha Fish) of Bangladesh.</h4>
+                <h4>Name of collection: Bangladesh</h4>
+                <h4>Size: 450mm X 350mm</h4>
+                <h4>Stamp Owned: 10</h4>
+                <h4>Stamp glued to: Album(Bangladesh)</h4>
+        </div>
+    </div>
+    <div class="card">
+        <img src="../images/ban_stamp7.jpg" alt="STAMP" style="width:100%">
+        <div class="container">
+                <h4>Issued Year: 1997</h4> 
+                <h4>Description: Sea lives of Bangladesh.</h4>
+                <h4>Name of collection: Bangladesh</h4>
+                <h4>Size: 400mm X 350mm</h4>
+                <h4>Stamp Owned: 6</h4>
+                <h4>Stamp glued to: Album(Bangladesh)</h4>
+        </div>
+    </div>
+    <div class="card">
+        <img src="../images/ban_stamp8.jpg" alt="STAMP" style="width:100%">
+            <div class="container">
+                    <h4>Issued Year: 1922</h4> 
+                    <h4>Description: This is national masque of Bangladesh.</h4>
+                    <h4>Name of collection: Bangladesh</h4>
+                    <h4>Size: 400mm X 350mm</h4>
+                    <h4>Stamp Owned: 5</h4>
+                    <h4>Stamp glued to: Album(Bangladesh)</h4>
+    </div>
+    </div>
+        <div class="card">
+            <img src="../images/ban_stamp9.jpg" alt="STAMP" style="width:100%">
+            <div class="container">
+                    <h4>Issued Year: 1972</h4> 
+                    <h4>Description: Statue of freedom fighter of Bangladesh.</h4>
+                    <h4>Name of collection: Bangladesh</h4>
+                    <h4>Size: 400mm X 350mm</h4>
+                    <h4>Stamp Owned: 1</h4>
+                    <h4>Stamp glued to: Album(Bangladesh)</h4>
+            </div>
+    </div>   
+    <div class="card">
+        <img src="../images/ban_stamp10.jpg" alt="STAMP" style="width:100%">
+        <div class="container">
+                <h4>Issued Year: 2000</h4> 
+                <h4>Description: Butterfly</h4>
+                <h4>Name of collection: Bangladesh</h4>
+                <h4>Size: 400mm X 350mm</h4>
+                <h4>Stamp Owned: 2</h4>
+                <h4>Stamp glued to: Album(Bangladesh)</h4>
+        </div>
+    </div>
+    <div class="card">
+        <img src="../images/ban_stamp11.jpg" alt="STAMP" style="width:100%">
+        <div class="container">
+                <h4>Issued Year: 1772</h4> 
+                <h4>Description: Queen of ENGLAND. it made when Bangladesh was under British government.</h4>
+                <h4>Name of collection: Bangladesh</h4>
+                <h4>Size: 200mm X 200mm</h4>
+                <h4>Stamp Owned: 1</h4>
+                <h4>Stamp glued to: Album(Bangladesh, England)</h4>
+        </div>
+    </div>
+</div>
+
+<div id="usa" value = "usa">
+    <div class="card"> 
+        <img src="../images/usa_stamp1.jpg" alt="STAMP" style="width:100%;">
+        <div class="container">
+            <h4>Issued Year: 1922</h4> 
+            <h4>Description: This is national masque of Bangladesh.</h4>
+            <h4>Name of collection: Bangladesh</h4>
+            <h4>Size: 400mm X 350mm</h4>
+            <h4>Stamp Owned: 5</h4>
+            <h4>Stamp glued to: Album(Bangladesh)</h4>
+        </div>
+    </div>
+    <div class="card"> 
+        <img src="../images/usa_stamp2.jpg" alt="STAMP" style="width:100%;">
+        <div class="container">
+            <h4>Issued Year: 1922</h4> 
+            <h4>Description: This is national masque of Bangladesh.</h4>
+            <h4>Name of collection: Bangladesh</h4>
+            <h4>Size: 400mm X 350mm</h4>
+            <h4>Stamp Owned: 5</h4>
+            <h4>Stamp glued to: Album(Bangladesh)</h4>
+        </div>
+    </div>    
+</div>
+</body>
+</html>
